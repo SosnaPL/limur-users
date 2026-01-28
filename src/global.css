@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(23, 23, 23);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border: 6px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+html {
+  background: #080808;
+  overflow-x: hidden;
+}
+
+body {
+  background: #080808;
+  color: rgb(236, 231, 231);
+  box-sizing: border-box;
+  text-shadow: 2px 2px #000;
+  overflow-x: hidden;
+}
+
+#app-container {
+  height: 100vh;
+}
+
+.suspense {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
