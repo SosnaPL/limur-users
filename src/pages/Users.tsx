@@ -28,7 +28,7 @@ const Users = () => {
 
   const sortedUsers = useMemo(() => {
     const sorted = [...filteredUsers].sort((a, b) => {
-      const comparison = a.name.localeCompare(b.name)
+      const comparison = a.username.localeCompare(b.username)
       return sortOrder === 'asc' ? comparison : -comparison
     })
     return sorted
@@ -79,17 +79,16 @@ const Users = () => {
                 <div className="users-table-header">
                   <table className="w-full table-fixed">
                     <colgroup>
-                      <col className="col-15" />
-                      <col className="col-15" />
                       <col className="col-20" />
-                      <col className="col-15" />
                       <col className="col-20" />
-                      <col className="col-15" />
+                      <col className="col-20" />
+                      <col className="col-20" />
+                      <col className="col-20" />
                     </colgroup>
                     <thead>
                       <tr>
                         <th onClick={toggleSortOrder}>
-                          Nazwa
+                          Nazwa użytkownika
                           <svg
                             className={`w-4 h-4 ${sortOrder === 'desc' ? 'rotated' : ''}`}
                             fill="currentColor"
@@ -98,9 +97,8 @@ const Users = () => {
                             <path d="M3 8l7 6 7-6H3z" />
                           </svg>
                         </th>
-                        <th>Nazwa użytkownika</th>
+                        <th>Imię i nazwisko</th>
                         <th>Email</th>
-                        <th>Telefon</th>
                         <th>Adres</th>
                         <th></th>
                       </tr>
@@ -115,12 +113,11 @@ const Users = () => {
                   ) : (
                     <table className="w-full table-fixed">
                       <colgroup>
-                        <col className="col-15" />
-                        <col className="col-15" />
                         <col className="col-20" />
-                        <col className="col-15" />
                         <col className="col-20" />
-                        <col className="col-15" />
+                        <col className="col-20" />
+                        <col className="col-20" />
+                        <col className="col-20" />
                       </colgroup>
                       <tbody>
                         {sortedUsers.map((user, idx) => (
@@ -128,10 +125,9 @@ const Users = () => {
                             key={user.id}
                             className={idx % 2 === 0 ? 'users-row-alt-1' : 'users-row-alt-2'}
                           >
-                            <td className="users-cell-text">{user.name}</td>
                             <td className="users-cell-text">{user.username}</td>
+                            <td className="users-cell-text">{user.name}</td>
                             <td className="users-cell-text">{user.email}</td>
-                            <td className="users-cell-text">{user.phone}</td>
                             <td className="users-cell-text">
                               {user.address.street}, {user.address.suite}
                               <br />

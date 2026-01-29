@@ -29,7 +29,7 @@ const UserModal: React.FC<UserModalProps> = ({ isOpen, user, onClose, onDelete }
         </button>
         <div className="modal-body">
           <div className="modal-field">
-            <p className="modal-label">Nazwa</p>
+            <p className="modal-label">Imię i nazwisko</p>
             <p className="modal-value">{user.name}</p>
           </div>
           <div className="modal-field">
