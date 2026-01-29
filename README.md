@@ -9,7 +9,7 @@
 1. **Clone or download the repository:**
    ```bash
    git clone https://github.com/SosnaPL/limur-users
-   cd limur
+   cd limur-users
    ```
 
 2. **Install dependencies:**
